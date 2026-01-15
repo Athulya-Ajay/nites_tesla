@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import Button from '../UI/Button';
 import { ChevronRight, Award, BookOpen, Users } from 'lucide-react';
+import banner from '../../assets/banner.jpg';
 
 const Hero = () => {
     return (
@@ -26,23 +27,28 @@ const Hero = () => {
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--color-brand-primary)] opacity-75"></span>
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--color-brand-primary)]"></span>
                             </span>
-                            Admissions Open for 2026-27
+                            Admissions Open for 2026–27
                         </div>
 
                         <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 text-[var(--color-text-primary)]">
                             Shaping Future <br />
-                            <span className="text-[var(--color-brand-primary)]">Engineers</span> & <span className="text-[var(--color-brand-accent)]">Doctors</span>
+                            <span className="text-[var(--color-brand-primary)]">Engineers</span> &{' '}
+                            <span className="text-[var(--color-brand-accent)]">Doctors</span>
                         </h1>
 
                         <p className="text-lg text-[var(--color-text-secondary)] mb-8 max-w-lg leading-relaxed">
-                            Join NITES Tesla Entrance Academy for top-tier coaching in NEET, JEE, and KEAM. Expert faculty, proven results, and personalized mentorship.
+                            Join NITES Tesla Entrance Academy for expert coaching in NEET, JEE, and KEAM.
+                            Learn from experienced faculty with proven results and focused mentorship.
                         </p>
 
                         <div className="flex flex-wrap gap-4 mb-12">
                             <Button className="text-lg px-8 py-3 shadow-xl shadow-blue-200">
                                 Enroll Now
                             </Button>
-                            <Button variant="outline" className="text-lg px-8 py-3 !border-gray-300 !text-gray-700 hover:!border-[var(--color-brand-primary)] hover:!text-[var(--color-brand-primary)]">
+                            <Button
+                                variant="outline"
+                                className="text-lg px-8 py-3 !border-gray-300 !text-gray-700 hover:!border-[var(--color-brand-primary)] hover:!text-[var(--color-brand-primary)]"
+                            >
                                 Contact Us
                             </Button>
                         </div>
@@ -63,7 +69,7 @@ const Hero = () => {
                         </div>
                     </motion.div>
 
-                    {/* Image/Visual Content */}
+                    {/* Image / Visual Content */}
                     <motion.div
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -71,46 +77,53 @@ const Hero = () => {
                         className="relative hidden lg:block"
                     >
                         <div className="relative z-10 bg-white p-2 rounded-2xl shadow-2xl">
-                            {/* Placeholder for a high-quality student learning image. 
-                   Using a gradient placeholder for now to keep it clean. */}
-                            <div className="w-full h-[500px] rounded-xl bg-gradient-to-br from-blue-100 to-indigo-50 flex items-center justify-center overflow-hidden relative">
-                                {/* Abstract Design Elements */}
-                                <div className="absolute top-10 right-10 w-20 h-20 bg-blue-200 rounded-full opacity-50 blur-xl"></div>
-                                <div className="absolute bottom-10 left-10 w-32 h-32 bg-green-200 rounded-full opacity-50 blur-xl"></div>
+                            <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
+                                {/* Academy Image */}
+                                <img
+                                    src={banner}
+                                    alt="NITES Tesla Entrance Academy"
+                                    className="w-full h-full object-cover"
+                                />
 
-                                {/* Mock UI Card Floating */}
+                                {/* Dark Gradient Overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
+
+                                {/* Floating Stats Card */}
                                 <motion.div
-                                    animate={{ y: [0, -10, 0] }}
+                                    animate={{ y: [0, -8, 0] }}
                                     transition={{ repeat: Infinity, duration: 4 }}
-                                    className="absolute bottom-8 right-8 bg-white p-4 rounded-xl shadow-lg flex items-center gap-3 z-20"
+                                    className="absolute bottom-6 left-6 right-6 bg-white/80 backdrop-blur-md rounded-xl p-5 shadow-lg flex justify-between text-center"
                                 >
-                                    <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600">
-                                        <Award size={20} />
+                                    <div>
+                                        <p className="text-xs text-gray-500">Success Rate</p>
+                                        <p className="text-xl font-bold text-gray-800">98%</p>
                                     </div>
                                     <div>
-                                        <p className="text-xs text-gray-500">Result 2025</p>
-                                        <p className="font-bold text-sm">98% Success Rate</p>
+                                        <p className="text-xs text-gray-500">Selections</p>
+                                        <p className="text-xl font-bold text-gray-800">500+</p>
+                                    </div>
+                                    <div>
+                                        <p className="text-xs text-gray-500">Experience</p>
+                                        <p className="text-xl font-bold text-gray-800">10+ Years</p>
                                     </div>
                                 </motion.div>
-
-                                {/* Entrance Exam Badges */}
-                                <div className="grid grid-cols-2 gap-4">
-                                    {['NEET', 'JEE Main', 'JEE Adv', 'KEAM'].map((exam) => (
-                                        <div key={exam} className="bg-white/80 backdrop-blur px-6 py-4 rounded-xl shadow-sm text-center font-bold text-gray-700">
-                                            {exam}
-                                        </div>
-                                    ))}
-                                </div>
                             </div>
                         </div>
 
-                        {/* Decorative dots grid */}
+                        {/* Decorative Dots */}
                         <div className="absolute -bottom-10 -left-10 w-24 h-24 text-blue-200 opacity-50">
                             <svg width="100%" height="100%">
-                                <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                                    <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+                                <pattern
+                                    id="dots"
+                                    x="0"
+                                    y="0"
+                                    width="20"
+                                    height="20"
+                                    patternUnits="userSpaceOnUse"
+                                >
+                                    <circle cx="2" cy="2" r="2" fill="currentColor" />
                                 </pattern>
-                                <rect width="100%" height="100%" fill="url(#dots)"></rect>
+                                <rect width="100%" height="100%" fill="url(#dots)" />
                             </svg>
                         </div>
                     </motion.div>

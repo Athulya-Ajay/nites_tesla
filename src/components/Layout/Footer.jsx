@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Youtube, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import Button from '../UI/Button';
+import logo from '../../assets/logo_white.png';
+
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -12,19 +14,14 @@ const Footer = () => {
 
                     {/* Brand Column */}
                     <div className="space-y-6">
-                        <div className="flex items-center gap-2">
-                            <div className="w-10 h-10 bg-[var(--color-brand-primary)] rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                                N
-                            </div>
-                            <div className="flex flex-col">
-                                <span className="text-xl font-bold tracking-tight leading-none">
-                                    NITES Tesla
-                                </span>
-                                <span className="text-xs font-medium text-gray-400 tracking-wider">
-                                    ENTRANCE ACADEMY
-                                </span>
-                            </div>
+                        <div className="flex items-center gap-3">
+                            <img
+                                src={logo}
+                                alt="NITES Tesla Entrance Academy"
+                                className="h-21 object-contain"
+                            />
                         </div>
+
                         <p className="text-gray-400 text-sm leading-relaxed">
                             Empowering students to achieve their dreams in Engineering and Medical fields through disciplined coaching and personalized mentorship.
                         </p>
