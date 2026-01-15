@@ -5,7 +5,7 @@ import Card from '../UI/Card';
 
 // Ranker images
 import ranker1 from '../../assets/ranker1.jpg';
-import ranker2 from '../../assets/ranker2.jpg';
+import ranker4 from '../../assets/ranker4.jpg';
 import ranker3 from '../../assets/ranker3.jpg';
 
 const stats = [
@@ -35,7 +35,7 @@ const rankers = [
         name: "Rahul Suresh",
         exam: "KEAM 2025",
         rank: "State Rank 12",
-        image: ranker2,
+        image: ranker4,
     },
 ];
 
