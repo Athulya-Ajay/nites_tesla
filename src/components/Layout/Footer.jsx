@@ -93,8 +93,11 @@ const Footer = () => {
                             <li className="flex items-start gap-3 text-gray-400 text-sm">
                                 <MapPin size={18} className="min-w-5 text-[var(--color-brand-primary)] mt-0.5" />
                                 <span>
-                                    Example Address Line 1,<br />
-                                    City, State, ZIP
+                                    <p>
+                                        NITES Tesla Entrance Academy<br />
+                                        Main Campus, 2nd Floor, City Center,<br />
+                                        Trivandrum, Kerala - 695001
+                                    </p>
                                 </span>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400 text-sm">
